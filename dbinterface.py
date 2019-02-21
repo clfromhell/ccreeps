@@ -41,7 +41,3 @@ class DBI:
     def reset_map(self, map_id):
         # TODO reset map to the default values in database
         pass
-
-    def create_map(self):
-        # TODO write create map (maybe via random generator/seed input)
-        pass
