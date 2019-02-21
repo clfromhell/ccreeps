@@ -9,28 +9,27 @@ class User:
         self._pwh = ""
         self._h = hashlib.sha256()
 
-    def newuser(self, nick, pw):
-        if not db.checknickavail(nick):
+    def new_user(self, nick, pw):
+        if not db.check_nick_avail(nick):
             self._nick = nick
             self._h.update(pw)
             self._pwh = self._h.hexdigest()
 
-            db.createuser(self._nick, self._pwh)
+            db.create_user(self._nick, self._pwh)
 
-            return db.getuserid(self._nick)
+            return db.get_user_id(self._nick)
 
         else:
 
             return 0
 
     def logon(self, nick, pw):
-        if db.checknickavail(nick):
+        if db.check_nick_avail(nick):
             self._nick = nick
             self._h.update(pw)
             self._pwh = self._h.hexdigest()
 
-            if db.checklogoninfo(self._nick, self._pwh):
+            if db.check_logon_info(self._nick, self._pwh):
                 return True
             else:
                 return False
-            
