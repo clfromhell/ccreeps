@@ -2,6 +2,27 @@ from dbinterface import DBI as db
 import hashlib
 
 
+class MapPoint:
+    def __init__(self, x, y, value=""):
+        self._x = x
+        self._y = y
+        self._value = value
+
+    def ret_value(self):
+        return self._value
+
+    def set_value(self, value=""):
+        self._value = value
+
+    def ret_coords(self):
+        return self._x, self._y
+    
+
+class Map:
+    def __init__(self, ):
+        pass
+    # TODO create Map class and check how to store its objects on harddisk
+
 class User:
     def __init__(self):
         self._uid = ""
