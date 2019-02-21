@@ -1,7 +1,4 @@
-#include <iostream>
-#include <thread>
-#include <string>
-using namespace std;
+#include "godlike_header.hpp"
 
 /*
  * Start point for ccreeps -> starts class threads and map
