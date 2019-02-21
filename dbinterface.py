@@ -44,5 +44,9 @@ class DBI:
         # TODO reset map to the default values in database
         pass
 
+    def create_map(self):
+        # TODO write create map (maybe via random generator/seed input)
+        pass
+
     # commands section
     # TODO: create table and functions for user unique command file where workers read commands from
