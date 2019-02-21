@@ -1,6 +1,9 @@
-def command():
-    print("sec")
+class Command:
+    cmds = []
 
+    def command(self):
+        print("sec")
 
-def get_cmd():
-    return command
+    def get_cmd(self):
+        return self.command
+

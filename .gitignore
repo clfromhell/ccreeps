@@ -12,6 +12,7 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/*
 
 # Generated files
 .idea/**/contentModel.xml
@@ -201,5 +202,9 @@ dmypy.json
 
 ### Python Patch ###
 .venv/
+encondings.xml
+misc.xml
+modules.xml
+*.iml
 
 # End of https://www.gitignore.io/api/python,pycharm

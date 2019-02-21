@@ -6,6 +6,7 @@ class DBI:
         conn = sqlite3.connect('pcreeps.db')
         self._c = conn.cursor()
 
+    # user section
     def create_user(self, nick, pwh):
         # TODO create new user in db
         pass
@@ -34,6 +35,7 @@ class DBI:
         # TODO drop user from database
         pass
 
+    # map section
     def remove_map(self, map_id):
         # TODO drop map from database
         pass
@@ -41,3 +43,10 @@ class DBI:
     def reset_map(self, map_id):
         # TODO reset map to the default values in database
         pass
+
+    def create_map(self):
+        # TODO write create map (maybe via random generator/seed input)
+        pass
+
+    # commands section
+    # TODO: create table and functions for user unique command file where workers read commands from
