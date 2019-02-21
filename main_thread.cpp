@@ -3,6 +3,6 @@
 #include <string>
 using namespace std;
 
-int main(string[] args) {
-    cout << args[0] << endl;
+int main(int argc, char *argv[]) {
+    cout << argv[1] << endl;
 }
