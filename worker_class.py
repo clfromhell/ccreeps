@@ -1,9 +1,9 @@
 # main class of this file
 class Worker:
 
-    def __init__(self, cmd, id):  # probably hash path
+    def __init__(self, cmd, worker_id):  # probably hash path
         self._cmd = cmd
-        self._id = id
+        self._id = worker_id
         self._status = None
         self.check_for_new_cmd()
 
