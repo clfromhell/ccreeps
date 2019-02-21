@@ -2,6 +2,7 @@ from dbinterface import DBI as db
 import hashlib
 import random
 
+
 class MapPoint:
     def __init__(self, x, y, value=""):
         self._x = x
@@ -20,13 +21,16 @@ class MapPoint:
 
 class Map:
     def __init__(self):
-        self._mappoints = []
-    # TODO create Map class and check how to store its objects on harddisk
+        self._map_points = [] * 16
+    # TODO check how to store those objects on harddisk
 
     def create_map(self):
         for y in range(15):
             for x in range(15):
-                self._mappoints.append(MapPoint(x, y, hex(random.randrange(0, 15))))
+                self._map_points[y].append(MapPoint(x, y, hex(random.randrange(0, 15))))
+
+    def get_field_value(self, x, y):
+        return self._map_points[y][x].ret_value()
 
 
 class User:
@@ -69,3 +73,6 @@ class User:
         db.remove_user(self._nick)
 
         del self
+
+
+if __name__ == "__main__":
