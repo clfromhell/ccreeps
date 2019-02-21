@@ -7,6 +7,7 @@ class User:
         self._uid = ""
         self._nick = ""
         self._pwh = ""
+        self._map_id = ""
         self._h = hashlib.sha256()
 
     def new_user(self, nick, pw):
@@ -21,7 +22,7 @@ class User:
 
         else:
 
-            return 0
+            return False
 
     def logon(self, nick, pw):
         if db.check_nick_avail(nick):
@@ -33,3 +34,11 @@ class User:
                 return True
             else:
                 return False
+
+    def del_user(self, nick):
+        self._nick = nick
+
+        db.remove_map(db.get_user_map(self._nick))
+        db.remove_user(self._nick)
+
+        del self
