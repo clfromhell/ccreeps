@@ -1,4 +1,7 @@
-//
-// Created by clfromhell on 21.02.2019.
-//
+#include <sqlite3>
+
+int main(int argc, char argv*[]) {
+
+
+}
 
