@@ -1,10 +1,9 @@
-import sqlite3
+import pymongo
 
 
 class DBI:
     def __init__(self):
-        conn = sqlite3.connect('pcreeps.db')
-        self._c = conn.cursor()
+        pass
 
     # user section
     def create_user(self, nick, pwh):
