@@ -43,7 +43,7 @@ class Cmd(cmd.Cmd):
         # todo: override old commands
         pass
 
-    def do_clear(self):
+    def do_clear(self, line):
         os.system("clear")
 
     def do_exit(self, line):
