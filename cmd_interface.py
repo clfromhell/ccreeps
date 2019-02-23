@@ -7,7 +7,11 @@ class Cmd(cmd.Cmd):
     bad_cmd = None
 
     def filter_func(self, line):
-        if "ls" in line or "mkdir" in line or "touch" in line or "rm" in line:
+        if "ls" in line\
+                or "mkdir" in line\
+                or "touch" in line\
+                or "rm" in line\
+                or "pwd" in line:
             return 0
         elif "cd" in line:  # cd is special :(
             return 1
