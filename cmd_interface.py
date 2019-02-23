@@ -73,7 +73,12 @@ class Cmd(cmd.Cmd):
 
     @staticmethod
     def help_general():
-        print("Write '!' first to use some sys commands!\nThough we filter some out ;)")
+        print("Write '!' first to use some sys commands!\nThough we filter the most out ;)")
+
+    @staticmethod
+    def help_available_sys_commands():
+        print("Following sys commands are allowed:\n"
+              " - cd\n - ls\n - mkdir\n - touch\n - rm\n - pwd")
 
 
 def main(intro=None):  # main method for recursive call at keyboard interrupt
