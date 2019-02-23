@@ -3,7 +3,6 @@ import cmd
 
 
 class Cmd(cmd.Cmd):
-
     # helper section
     bad_cmd = None
 
@@ -45,13 +44,14 @@ class Cmd(cmd.Cmd):
             elif filter_res == 1:
                 if os.getcwd() == "/home/{}/safe_space".format(os.getlogin()) and ".." in sys_commands:
                     print("Nana you sassy sasquatch :3\n"
-                          "Don't try breaking out of the safe space :placeholder:")
+                          "Don't try breaking out of the safe space ノ┬─┬ノ ~~ ( \o°o)\ ")
                 else:
                     os.chdir(sys_commands.split()[1])
             else:
                 os.system(sys_commands)
         else:
             print(line)
+
     # help descriptions
     @staticmethod
     def help_create_new_worker():
@@ -70,6 +70,8 @@ class Cmd(cmd.Cmd):
     @staticmethod
     def help_general():
         print("Write '!' first to use some sys commands!\nThough we filter some out ;)")
+
+
 def main(intro=None):  # main method for recursive call at keyboard interrupt
     cmd_custom = Cmd()
     try:
